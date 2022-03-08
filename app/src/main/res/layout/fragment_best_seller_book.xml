@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--LinearLayout all elements in XML will show in its order placed below-->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
@@ -12,6 +12,11 @@
         android:id="@+id/ranking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:typeface="serif"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:text="1"
         android:textAppearance="?attr/textAppearanceListItem" />
 
@@ -19,51 +24,63 @@
         android:id="@+id/book_image"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
         android:layout_gravity="left"
+        android:layout_margin="5dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/ranking"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/book_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
+        android:lines="2"
         android:ellipsize="end"
         android:text="The Things They Carried"
         android:textAppearance="?attr/textAppearanceListItem"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_image" />
 
     <TextView
         android:id="@+id/book_author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
         android:ellipsize="end"
         android:lines="1"
         android:text="Tim O' Brien"
         android:textAppearance="?attr/textAppearanceListItem"
-        android:textStyle="italic" />
+        android:textStyle="italic"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_title" />
 
     <TextView
         android:id="@+id/book_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
         android:ellipsize="end"
-        android:lines="5"
+        android:fontFamily="sans-serif-light"
+        android:lines="6"
         android:text="The Things They Carried is a collection of linked short stories by American novelist Tim O'Brien, about a platoon of American soldiers fighting on the ground in the Vietnam War. His third book about the war, it is based upon his experiences as a soldier in the 23rd Infantry Division."
-        android:fontFamily="sans-serif-light" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_author" />
+
     <Button
         android:id="@+id/buy_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
         android:layout_gravity="left"
-        android:text="BUY ON AMAZON" />
+        android:layout_margin="5dp"
+        android:text="BUY ON AMAZON"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_description" />
 
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
