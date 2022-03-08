@@ -27,6 +27,11 @@ GIF created with [Recordit](https://recordit.co/).
 
 This is the starter code for lab 1, see [Android University Course - Lab 1](https://courses.codepath.org/courses/android_university/unit/1#!exercises) for additional instructions.
 
+Notes used:
+https://guides.codepath.org/android/Constructing-View-Layouts
+https://guides.codepath.org/android/Working-with-the-TextView
+https://guides.codepath.org/android/Defining-Views-and-their-Attributes
+
 ## Open-source libraries used
 
 - [Retrofit](https://github.com/square/retrofit) - This is a commonly used industry level networking library
